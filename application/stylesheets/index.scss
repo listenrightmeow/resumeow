@@ -1,0 +1,13 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+body {
+  header {
+    @include grid-container;
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
+
+    width: 100%;
+  }
+}
