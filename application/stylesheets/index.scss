@@ -2,12 +2,30 @@
 @import "neat/neat";
 
 body {
-  header {
-    @include grid-container;
-    @include display(flex);
-    @include align-items(center);
-    @include justify-content(center);
+  background-color: red;
 
-    width: 100%;
+  aside, main {
+    display: inline-block;
+    float: left;
+    height: 1000px;
+  }
+
+  aside {
+    width: 12.5%;
+    background-color: #333;
+  }
+
+  main {
+    @include grid-media($small){
+    }
+
+    @include grid-media($medium){
+    }
+
+    @include grid-media($large){
+    }
+
+    @include grid-media($xlarge){
+    }
   }
 }
