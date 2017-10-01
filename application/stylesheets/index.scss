@@ -1,31 +1,41 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import "breakpoints";
 
 body {
-  background-color: red;
-
-  aside, main {
-    display: inline-block;
-    float: left;
-    height: 1000px;
-  }
-
   aside {
     width: 12.5%;
     background-color: #333;
   }
 
   main {
-    @include grid-media($small){
-    }
+    width: 87.5%;
+    // backgorund-color
+  }
+}
 
-    @include grid-media($medium){
-    }
+aside {
+  ul {
+    list-style-type: none;
+  }
+  button {
+    height: 30px;
+    width: 30px;
 
-    @include grid-media($large){
-    }
+    background-size: 25px 25px;
+    background-position: center;
 
-    @include grid-media($xlarge){
+    &[name="work"]{
+      background-image:  url("../images/icons/aside-work.svg");
+    }
+    &[name="education"]{
+      background-image:  url("../images/icons/aside-education.svg");
+    }
+    &[name="accolades"]{
+      background-image:  url("../images/icons/aside-accolades.svg");
+    }
+    &[name="skills"]{
+      background-image: url("../images/icons/aside-skills.svg");
     }
   }
 }
