@@ -8,6 +8,8 @@
 
 
 body {
+
+    font-family: Helvetica, sans-serif;
   background-color: red;
 
   aside, main {
@@ -15,7 +17,7 @@ body {
     float: left;
     height: 1000px;
   }
-
+  
   aside {
     width: 12.5%;
     background-color: #333;
