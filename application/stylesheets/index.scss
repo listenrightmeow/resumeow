@@ -1,15 +1,10 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
-@import "breakpoints.scss";
-@import "small";
-@import "medium";
-@import "large";
-@import "xlarge";
+@import "breakpoints";
 
 
 body {
-
-    font-family: Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   background-color: red;
 
   aside, main {
@@ -17,25 +12,13 @@ body {
     float: left;
     height: 1000px;
   }
-  
+
   aside {
     width: 12.5%;
     background-color: #333;
   }
 
   main {
-
-    @include grid-media($small){
-    }
-
-    @include grid-media($medium){
-    }
-
-    @include grid-media($large){
-    }
-
-    @include grid-media($xlarge){
-
     width: 87.5%;
     // backgorund-color
   }
@@ -64,5 +47,30 @@ aside {
     &[name="skills"]{
       background-image: url("../images/icons/aside-skills.svg");
     }
+  }
+}
+
+nav ul {
+  @include grid-container;
+
+  li {
+    border: 1px solid black;
+
+    @include grid-media($small){
+      @include grid-column(1);
+    }
+
+    @include grid-media($medium){
+      @include grid-column(1);
+    }
+
+    @include grid-media($large){
+      @include grid-column(1);
+    }
+
+    @include grid-media($xlarge){
+      @include grid-column(1);
+    }
+
   }
 }
