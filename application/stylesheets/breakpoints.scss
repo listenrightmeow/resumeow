@@ -2,6 +2,7 @@
 @import "neat/neat";
 
 $gutter: 16px;
+<<<<<<< Updated upstream
 $small: (
   columns: 2 ,
   gutter: 0,
@@ -26,3 +27,14 @@ $small: (
     gutter: 0,
     media: 992px,
   );
+=======
+//$small: (columns: 2, gutter: $gutter, media: 320px);
+//$medium: (columns: 3, gutter: $gutter, media: 480px);
+//$large: (columns: 4, gutter: $gutter, media: 768px);
+//$xlarge: (columns: 5, gutter: $gutter, media: 992px);
+
+$small: new-breakpoint(max-width 320px 2);
+$medium: new-breakpoint(min-width 321px max-width 480px 3);
+$large: new-breakpoint(min-width 481px max-width 768px 4);
+$xlarge: new-breakpoint(min-width 469px max-width 992px 5);
+>>>>>>> Stashed changes

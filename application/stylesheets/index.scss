@@ -1,5 +1,6 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+<<<<<<< Updated upstream
 @import "breakpoints.scss";
 
 
@@ -33,6 +34,35 @@ body {
 
     @include grid-media($xlarge){
       @include grid-columns(1);
+=======
+@import "breakpoints";
+
+body {
+  background-color: red;
+
+  aside, main {
+    display: inline-block;
+    float: left;
+    height: 1000px;
+  }
+
+  aside {
+    width: 12.5%;
+    background-color: #333;
+  }
+
+  main {
+    @include grid-media($small){
+    }
+
+    @include grid-media($medium){
+    }
+
+    @include grid-media($large){
+    }
+
+    @include grid-media($xlarge){
+>>>>>>> Stashed changes
     }
   }
 }
