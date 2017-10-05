@@ -10,7 +10,7 @@ body {
   aside, main {
     display: inline-block;
     float: left;
-    height: 1000px;
+    height: 800px;
   }
 
   aside {
@@ -27,10 +27,18 @@ body {
 aside {
   ul {
     list-style-type: none;
+    position: relative;
+    top: 250px;
+    bottom: 250px;
+    left: 60px;
+
+
+
   }
   button {
     height: 30px;
     width: 30px;
+
 
     background-size: 25px 25px;
     background-position: center;
@@ -46,9 +54,11 @@ aside {
     }
     &[name="skills"]{
       background-image: url("../images/icons/aside-skills.svg");
+      }
     }
   }
-}
+
+
 
 nav ul {
   @include grid-container;
