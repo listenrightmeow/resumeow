@@ -1,43 +1,9 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
-<<<<<<< Updated upstream
-@import "breakpoints.scss";
-
-
-body {
-  background-color: red;
-
-  aside, main {
-    display: inline-block;
-    float: left;
-    height: 1000px;
-  }
-
-  aside {
-    width: 12.5%;
-    background-color: #333;
-  }
-
-  main {
-    @include grid-media($small){
-      @include grid-colunms (1);
-    }
-
-
-    @include grid-media($medium){
-      @include grid-columns(1);
-    }
-
-    @include grid-media($large){
-      @include grid-columns(1);
-    }
-
-    @include grid-media($xlarge){
-      @include grid-columns(1);
-=======
 @import "breakpoints";
 
 body {
+  font-family: Helvetica, sans-serif;
   background-color: red;
 
   aside, main {
@@ -52,17 +18,71 @@ body {
   }
 
   main {
+    width: 87.5%;
+    // backgorund-color
+  }
+}
+
+aside {
+  ul {
+    list-style-type: none;
+  }
+  button {
+    height: 30px;
+    width: 30px;
+
+    background-size: 25px 25px;
+    background-position: center;
+
+    &[name="work"]{
+      background-image:  url("../images/icons/aside-work.svg");
+    }
+    &[name="education"]{
+      background-image:  url("../images/icons/aside-education.svg");
+    }
+    &[name="accolades"]{
+      background-image:  url("../images/icons/aside-accolades.svg");
+    }
+    &[name="skills"]{
+      background-image: url("../images/icons/aside-skills.svg");
+    }
+  }
+}
+
+nav ul {
+  @include grid-container;
+
+  li {
+    border: 1px solid black;
+
     @include grid-media($small){
+      @include grid-column(1);
     }
 
     @include grid-media($medium){
+      @include grid-column(1);
     }
 
     @include grid-media($large){
+      @include grid-column(1);
     }
 
     @include grid-media($xlarge){
->>>>>>> Stashed changes
+      @include grid-column(1);
     }
+
+  }
+
+  picture img {
+    display: block;
+    position: relative;
+     top: 50%;
+     transform: translate(50%);
+    // left: 50%;
+     //width: 100px;
+     //height: 100px;
+     //margin-top: -50px;
+     //margin-left: -50px;
+
   }
 }
