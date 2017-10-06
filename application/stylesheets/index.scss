@@ -61,30 +61,22 @@ aside {
 
 nav ul {
   @include grid-container;
+  @include grid-visual;
 
   li {
     border: 1px solid black;
 
-    @include grid-media($small){
+    @include grid-media($assignmentsm){
       @include grid-column(1);
     }
 
-    @include grid-media($medium){
+    @include grid-media($assignmentlg){
       @include grid-column(1);
     }
-
-    @include grid-media($large){
-      @include grid-column(1);
-    }
-
-    @include grid-media($xlarge){
-      @include grid-column(1);
-    }
-
   }
 
   picture img {
-    display: block;
+    //display: block;
     position: relative;
      top: 50%;
      transform: translate(50%);
