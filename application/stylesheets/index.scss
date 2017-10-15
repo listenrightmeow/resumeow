@@ -2,9 +2,10 @@
 @import "neat/neat";
 @import "breakpoints";
 
-body {
+  body {
   font-family: Helvetica, sans-serif;
-  background-color: lightgrey;
+  background-color: purple;
+  }
 
   aside, main {
     display: inline-block;
@@ -21,7 +22,6 @@ body {
     width: 87.5%;
     // backgorund-color
   }
-}
 
 aside {
   ul {
@@ -56,8 +56,11 @@ aside {
       }
     }
   }
-
-
+  //added container w display flex value-Cassie
+.container{
+  display: flex;
+  background-color: purple;
+}
 
 nav ul {
   @include grid-container;
@@ -84,6 +87,8 @@ nav ul {
     }
 
   }
+
+
 
   picture img {
     // display: block;
