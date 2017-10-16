@@ -26,21 +26,21 @@
 aside {
   ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
     position: relative;
-    top: 250px;
-    bottom: 250px;
-    left: 60px;
-
-
-
+    top: 200px;
+    left: 35px;
   }
+
+
   button {
     height: 30px;
     width: 30px;
 
 
     background-size: 25px 25px;
-    background-position: center;
+    background-position:  center;
 
     &[name="work"]{
       background-image:  url("../images/icons/aside-work.svg");
