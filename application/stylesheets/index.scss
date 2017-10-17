@@ -2,104 +2,104 @@
 @import "neat/neat";
 @import "breakpoints";
 
-  body {
+body {
+  @include grid-column(12);
+  // margin: 0;
   font-family: Helvetica, sans-serif;
-  background-color: purple;
-  }
+}
 
-  aside, main {
-    display: inline-block;
-    float: left;
-    height: 800px;
-  }
-
-  aside {
-    width: 12.5%;
-    background-color: #333;
-  }
-
-  main {
-    width: 87.5%;
-    // backgorund-color
-  }
+aside, main {
+  display: inline-block;
+  float: left;
+}
 
 aside {
-  ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 200px;
-    left: 35px;
-  }
+  @include grid-column(2);
+  background-color: #333;
+  // margin: 0;
+}
 
+main {
+  @include grid-container;
+  @include grid-visual;
+  @include grid-column(10);
+  margin: 0;
 
-  button {
-    height: 30px;
-    width: 30px;
+  nav ul {
+    @include display(flex);
+    @include flex-wrap(wrap);
 
+    li {
+      @include display(flex);
+      @include align-items(center);
+      @include justify-content(center);
 
-    background-size: 25px 25px;
-    background-position:  center;
+      background-color: rgba(0, 0, 0, 0.5);
 
-    &[name="work"]{
-      background-image:  url("../images/icons/aside-work.svg");
-    }
-    &[name="education"]{
-      background-image:  url("../images/icons/aside-education.svg");
-    }
-    &[name="accolades"]{
-      background-image:  url("../images/icons/aside-accolades.svg");
-    }
-    &[name="skills"]{
-      background-image: url("../images/icons/aside-skills.svg");
+      @include grid-media($large) {
+        width: 20%;
+        max-width: 20%;
+      }
+
+      @include grid-media($xlarge) {
+        width: 25%;
+        max-width: 25%;
+      }
+
+      img {
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(center);
+        // height: 100%;
+        width: 100%;
+        // max-width: 80%;
       }
     }
   }
-  //added container w display flex value-Cassie
-.container{
-  display: flex;
-  background-color: purple;
 }
 
-nav ul {
+footer {
   @include grid-container;
-  @include grid-visual;
-
-  li {
-    height: 80px;
-    margin-top: 20px;
-
-    box-sizing: border-box;
-    border: 1px solid black;
-
-    @include grid-media($homework1){
-      @include grid-column(1);
-    }
-
-    @include grid-media($homework2){
-      @include grid-column(1);
-    }
-
-    img {
-      height: 100%;
-      width: 100%;
-    }
-
-  }
-
-
-
-  picture img {
-    // display: block;
-    // position: relative;
-    //  top: 50%;
-    //  transform: translate(50%);
-    // left: 50%;
-     //width: 100px;
-     //height: 100px;
-     //margin-top: -50px;
-     //margin-left: -50px;
-
-  }
+  @include grid-column(12);
 }
+
+// aside {
+//   ul {
+//     list-style-type: none;
+//     display: flex;
+//     flex-direction: column;
+//     position: relative;
+//     top: 200px;
+//     left: 35px;
+//   }
+//
+//
+//   button {
+//     height: 30px;
+//     width: 30px;
+//
+//
+//     background-size: 25px 25px;
+//     background-position:  center;
+//
+//     &[name="work"]{
+//       background-image:  url("../images/icons/aside-work.svg");
+//     }
+//     &[name="education"]{
+//       background-image:  url("../images/icons/aside-education.svg");
+//     }
+//     &[name="accolades"]{
+//       background-image:  url("../images/icons/aside-accolades.svg");
+//     }
+//     &[name="skills"]{
+//       background-image: url("../images/icons/aside-skills.svg");
+//       }
+//     }
+//   }
+//
+//   //added container w display flex value-Cassie
+//   .container{
+//     display: flex;
+//     background-color: purple;
+//   }
+// }
