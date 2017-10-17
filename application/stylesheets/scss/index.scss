@@ -3,7 +3,6 @@
 @import "breakpoints";
 
 body {
-  @include grid-column(12);
   // margin: 0;
   font-family: Helvetica, sans-serif;
 }
@@ -35,6 +34,16 @@ main {
       @include justify-content(center);
 
       background-color: rgba(0, 0, 0, 0.5);
+
+      @include grid-media($small) {
+        width: 50%;
+        max-width: 50%;
+      }
+
+      @include grid-media($medium) {
+        width: 33%;
+        max-width: 33%;
+      }
 
       @include grid-media($large) {
         width: 20%;
