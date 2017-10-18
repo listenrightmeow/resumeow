@@ -11,13 +11,33 @@ body {
 aside, main {
   display: inline-block;
   float: left;
+
+
 }
 
 aside {
   @include grid-column(2);
   background-color: #333;
+
   // margin: 0;
 }
+
+aside button {
+  height: 30px;
+  width: 30px;
+  background-size: 25px 25px;
+  background-position: center;}
+aside button[name="work"] {
+  background-image: url("../images/icons/aside-work.svg"); }
+aside button[name="education"] {
+  background-image: url("../images/icons/aside-education.svg"); }
+aside button[name="accolades"] {
+  background-image: url("../images/icons/aside-accolades.svg"); }
+aside button[name="skills"] {
+  background-image: url("../images/icons/aside-skills.svg"); }
+
+
+
 
 main {
   @include grid-container;
