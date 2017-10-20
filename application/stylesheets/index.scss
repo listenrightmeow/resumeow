@@ -13,10 +13,42 @@ section {
 
   aside, main {
     @include grid-visual;
+
+
+
+
   }
 
   aside {
     @include grid-column(2);
+    @include display(flex);
+    @include flex-direction(column);
+    @include flex-wrap(nowrap);
+    @include justify-content(center);
+    @include align-items(center);
+    @include align-content(space around);
+    height: 900px;
+
+}
+  button {
+    height: 30px;
+    width: 30px;
+    background-size: 25px 25px;
+    background-position: center;
+    &[name="work"] {
+      background-image: url("../images/icons/aside-work.svg");
+    }
+    &[name="education"] {
+      background-image: url("../images/icons/aside-education.svg");
+    }
+    &[name="accolades"] {
+      background-image: url("../images/icons/aside-accolades.svg");
+    }
+    &[name="skills"] {
+      background-image: url("../images/icons/aside-skills.svg");
+    }
+
+  }
 
     background-color: #333;
   }
@@ -64,7 +96,7 @@ section {
       }
     }
   }
-}
+
 
 footer {
   @include grid-container;
