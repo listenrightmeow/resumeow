@@ -1,5 +1,4 @@
-$gutter: 20px;
-$small: (columns: 2, gutter: $gutter, media: 320px);
-$medium: (columns: 3, gutter: $gutter, media: 480px);
-$large: (columns: 3, gutter: $gutter, media: 768px);
-$xlarge: (columns: 4, gutter: $gutter, media: 992px);
+$small: (columns: 2, media: 320px);
+$medium: (columns: 3, media: 480px);
+$large: (columns: 3, media: 768px);
+$xlarge: (columns: 4, media: 992px);
