@@ -1,0 +1,131 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "breakpoints";
+
+body {
+  background-color: #fff;
+  font-family: Helvetica, sans-serif;
+}
+
+section {
+  @include grid-column(12);
+  @include grid-collapse;
+
+aside, main {
+  display: inline-block;
+  float: left;
+  @include grid-visual;
+
+}
+
+aside {
+  @include grid-column(2);
+  background-color: #333;
+
+  // margin: 0;
+}
+
+aside button {
+  height: 30px;
+  width: 30px;
+  background-size: 25px 25px;
+  background-position: center;}
+aside button[name="work"] {
+  background-image: url("../images/icons/aside-work.svg"); }
+aside button[name="education"] {
+  background-image: url("../images/icons/aside-education.svg"); }
+aside button[name="accolades"] {
+  background-image: url("../images/icons/aside-accolades.svg"); }
+aside button[name="skills"] {
+  background-image: url("../images/icons/aside-skills.svg"); }
+
+
+
+
+main {
+  @include grid-container;
+  @include grid-visual;
+  @include grid-column(10);
+  margin: 0;
+
+
+    nav ul {
+      @include display(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(column);
+      @include grid-column(3);
+
+      li {
+        width: 100%;
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(center);
+
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+
+        background-color: #fff;
+        margin: 0 10px 10px 0;
+
+        a {
+          width: 100%;
+          height: auto;
+          text-align: center;
+
+          img {
+            width: auto;
+            max-width: 100%;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+footer {
+  @include grid-container;
+  @include grid-column(12);
+}
+
+// aside {
+//   ul {
+//     list-style-type: none;
+//     display: flex;
+//     flex-direction: column;
+//     position: relative;
+//     top: 200px;
+//     left: 35px;
+//   }
+//
+//
+//   button {
+//     height: 30px;
+//     width: 30px;
+//
+//
+//     background-size: 25px 25px;
+//     background-position:  center;
+//
+//     &[name="work"]{
+//       background-image:  url("../images/icons/aside-work.svg");
+//     }
+//     &[name="education"]{
+//       background-image:  url("../images/icons/aside-education.svg");
+//     }
+//     &[name="accolades"]{
+//       background-image:  url("../images/icons/aside-accolades.svg");
+//     }
+//     &[name="skills"]{
+//       background-image: url("../images/icons/aside-skills.svg");
+//       }
+//     }
+//   }
+//
+//   //added container w display flex value-Cassie
+//   .container{
+//     display: flex;
+//     background-color: purple;
+//   }
+// }
