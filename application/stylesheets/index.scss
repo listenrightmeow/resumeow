@@ -14,28 +14,46 @@ section {
   aside {
     @include grid-column(2);
 
+    height: 100%;
     background-color: #333;
 
-    button {
-      width: 30px;
-      height: 30px;
-      background-size: 25px 25px;
-      background-position: center;
+    nav {
+      // height: 900px;
 
-      &[name="work"] {
-        background-image: url("../images/icons/aside-work.svg");
-      }
+      ul {
+        @include display(flex);
+        @include flex-direction(column);
+        @include flex-wrap(nowrap);
+        @include justify-content(space-around);
+        @include align-items(center);
 
-      &[name="education"] {
-        background-image: url("../images/icons/aside-education.svg");
-      }
+        // height: 900px;
 
-      &[name="accolades"] {
-        background-image: url("../images/icons/aside-accolades.svg");
-      }
+        li {
+          width: 50%;
+          button {
+            width: 100%;
+            height: 100%;
+            background-size: 30px 30px;
+            background-position: center;
 
-      &[name="skills"] {
-        background-image: url("../images/icons/aside-skills.svg");
+            &[name="work"] {
+              background-image: url("../images/icons/aside-work.svg");
+            }
+
+            &[name="education"] {
+              background-image: url("../images/icons/aside-education.svg");
+            }
+
+            &[name="accolades"] {
+              background-image: url("../images/icons/aside-accolades.svg");
+            }
+
+            &[name="skills"] {
+              background-image: url("../images/icons/aside-skills.svg");
+            }
+          }
+        }
       }
     }
   }
