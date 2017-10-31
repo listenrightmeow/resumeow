@@ -55,8 +55,6 @@ section:first-child {
     @include grid-column(7, $parent);
     @include grid-shift(1, $parent);
 
-    margin: 0;
-
     nav ul {
       @include grid-media($small){
         @include grid-column(1);
