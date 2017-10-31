@@ -1,5 +1,5 @@
-$small: (columns: 2, gutter: 0, media: 320px);
-$medium: (columns: 3, gutter: 0, media: 480px);
-$large: (columns: 3, gutter:0, media: 768px);
-$xlarge: (columns: 4, gutter:0, media: 1080px);
-$parent: (columns: 8, gutter: 0);
+$small: (columns: 2, gutter: 10px, media: 320px);
+$medium: (columns: 3, gutter: 10px, media: 480px);
+$large: (columns: 3, gutter: 10px, media: 768px);
+$xlarge: (columns: 4, gutter: 10px, media: 1080px);
+$parent: (columns: 8, gutter: 0px);

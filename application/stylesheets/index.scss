@@ -13,9 +13,6 @@ body {
 }
 
 section:first-child {
-//  @include grid-column(12);
-//  @include grid-collapse;
-
   height: 100%;
 
   aside {
@@ -56,41 +53,30 @@ section:first-child {
   main {
     @include grid-container;
     @include grid-column(7, $parent);
-    @include grid-shift(2);
+    @include grid-shift(1, $parent);
 
     margin: 0;
 
     nav ul {
       @include grid-media($small){
-          // width: 50%;
-          // max-width: 50%;
         @include grid-column(1);
       }
 
       @include grid-media($medium){
         @include grid-column(1);
-        // width: 33%;
-        // max-width: 33%;
       }
 
       @include grid-media($large){
         @include grid-column(1);
-        // width: 20%;
-        // max-width: 20%;
       }
 
       @include grid-media($xlarge){
         @include grid-column(1);
-        // width: 25%;
-        // max-width: 25%;
       }
 
       li {
-        @include align-items(center);
-        @include justify-content(center);
-
         width: 100%;
-        margin: 0 10px 10px 0;
+        margin-top: 10px;
         background-color: #fff;
 
         -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
